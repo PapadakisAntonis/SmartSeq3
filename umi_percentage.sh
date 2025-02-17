@@ -2,7 +2,7 @@
 
 #Step 0: Check what the UMI distribution looks like
 
-# Make output fule
+# Make output file
 OUTPUT_FILE="umi_percentage_results.txt"
 echo "UMI Percentage Results" > $OUTPUT_FILE
 echo "=====================" >> $OUTPUT_FILE
