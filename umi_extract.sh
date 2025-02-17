@@ -67,11 +67,11 @@ echo "Reads: $rn" > "${READ_NUM}"
 nb_umis=$(zcat "${R1_OUTPUT}" | awk 'END {print NR/4}')
 echo "UMI percentage: $(( nb_umis * 100 / nb_totFrag ))" > "${UMI}"
 
-# Create total reads files
+# Create total read files
 echo "  Creating final total read files..."
 cat ${R1_FILTERED} >> ${R1_OUTPUT}
 mv ${R1_OUTPUT} ${R1_TOTAL}
-cat ${R2_FILTERED} >> ${R2_OUTPUT}  # Ensure all R2 reads are included
+cat ${R2_FILTERED} >> ${R2_OUTPUT}  
 mv ${R2_OUTPUT} ${R2_TOTAL}
 echo "Completed processing $BASENAME"	
 
