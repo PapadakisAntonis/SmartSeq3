@@ -12,7 +12,7 @@ R2_FILE=${R1_FILE/R1/R2}
 # Define UMI sequences. Maybe make a function here so that it is more flexible.
 UMI_PATTERN="TGCGCAATG[ACGT]{8}GGG" # Forward UMI pattern
 REVERSE_UMI_PATTERN="CCC[ACGT]{8}CATTGCGCA" # Reverse complement UMI pattern
-COMPLEMENT_UMI_PATTERN="ACGCGTTAC[TCGA]{8}CCC" # Complement UMI pattern
+COMPLEMENT_UMI_PATTERN="ACGCGTTAC[TCGA]{8}CCC" # Complement UMI pattern. I expect 0 hits from this, should also serve as negative control.
 
 # Calculate total number of reads (assumes 4 lines per read)
 nb_lines_R1=$(zcat ${R1_FILE} | wc -l)
@@ -55,6 +55,8 @@ echo "Results for $R1_FILE and $R2_FILE" >> $OUTPUT_FILE
     echo "$R1_FILE: Percentage of UMI reads in R1 (Complement): $percent_umis_R1_complement%" >> $OUTPUT_FILE
     echo "$R2_FILE: Percentage of UMI reads in R2 (Complement): $percent_umis_R2_complement%" >> $OUTPUT_FILE
     echo "" >> $OUTPUT_FILE
+
+# An alternative version that produces one output per fasta pair would also work, but I don't want to create hundreds of new files.
 
 done
 
