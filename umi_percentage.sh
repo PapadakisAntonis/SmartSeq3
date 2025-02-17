@@ -11,7 +11,7 @@ for R1_FILE in $1/*R1*.fastq.gz; do
 R2_FILE=${R1_FILE/R1/R2}
 # Define UMI sequences. Maybe make a function here so that it is more flexible.
 ORIGINAL_UMI_PATTERN="ATTGCGCAATG[ACGT]{8}GGG" # Forward 10bp UMI pattern
-ALTERNATE_UMI_PATTERN="ATTGCGCAATG[ACGT]{8}GGG" # Alternative 10bp UMI pattern
+ALTERNATE_UMI_PATTERN="CTTGCGCAATG[ACGT]{8}GGG" # Alternative 10bp UMI pattern
 UMI_PATTERN="TGCGCAATG[ACGT]{8}GGG" # Forward 8bp UMI pattern
 REVERSE_UMI_PATTERN="CCC[ACGT]{8}CATTGCGCA" # Reverse complement UMI pattern
 COMPLEMENT_UMI_PATTERN="ACGCGTTAC[TCGA]{8}CCC" # Complement UMI pattern
