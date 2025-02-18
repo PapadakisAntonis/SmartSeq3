@@ -1,0 +1,1 @@
+This is new foo text file with more foo and more lines. \n foo \n foo \n foo \n foo!!!!!!!!!!!!1
