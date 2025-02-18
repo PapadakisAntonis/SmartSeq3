@@ -1,3 +1,1 @@
-This is my new file!
-
-Hello Paula and Antonis :)!
+some changes to the foo
